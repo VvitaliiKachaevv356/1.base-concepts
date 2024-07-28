@@ -127,3 +127,8 @@ library.addBook(new Magazine("Наука и жизнь", 1919, 50));
 
 let book1919 = library.findBookBy("releaseDate", 1919);
 console.log(book1919)
+
+let randomBook = library.giveBookByName("Война и мир");
+randomBook.state = 20;
+randomBook.fix();
+randomBook.addBook(randomBook);
