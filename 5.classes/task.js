@@ -124,8 +124,14 @@ library.addBook(new NovelBook("Герберт Уэллс", "Машина вре�
 library.addBook(new Magazine("Мурзилка", 1924, 60));
 library.addBook(new FantasticBook("Исаак Азимов", "Фонд", 1951, 90));
 library.addBook(new Magazine("Наука и жизнь", 1919, 50));
-
+library.addBook(new Magazine("Война и мир", 1930, 550));
 let book1919 = library.findBookBy("releaseDate", 1919);
-console.log(book1919)
+console.log(book1919);
 
 let randomBook = library.giveBookByName("Война и мир");
+randomBook.state = 20;
+console.log(randomBook.state);
+randomBook.fix();
+console.log(randomBook.state)
+library.addBook(randomBook);
+console.log(randomBook)
